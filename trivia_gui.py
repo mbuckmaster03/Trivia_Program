@@ -54,15 +54,8 @@ class History(Screen):
         
         history_ans ={1 :["Banana", "Hot", "Random", "Hand"],
                       2 :["Red", "Cold", "Apple", "Ear"]}
-        self.Q1()
-        
-        
-        def Q1(self):
-            answers = 1
-            set_up(answers)
+
             
-        
-        
         
         def set_up(self,answers):
             
@@ -94,10 +87,11 @@ class History(Screen):
             self.grid_rowconfigure(3, weight = 1)
             self.grid_rowconfigure(4, weight = 1)        
          
-
-
-        
-        
+            
+        answers = 1
+        set_up(self, answers)
+    
+    
 #Main
 if __name__ == "__main__":
     
@@ -112,5 +106,5 @@ if __name__ == "__main__":
     screens = [MainMenu(), History()]
     screens[0].grid(row = 0, column = 0, sticky = "news")
     screens[1].grid(row = 0, column = 0, sticky = "news")
-    screens[1].tkraise()
+    screens[0].tkraise()
     root.mainloop()
